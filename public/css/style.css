@@ -34,6 +34,11 @@ body
     background-color: var(--butcol);
 }
 
+.Reset
+{
+    padding: 0.5rem 0.5rem;
+}
+
 #root
 {
     text-align: center;
