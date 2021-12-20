@@ -13,10 +13,14 @@ body
     font-family: Calibri;
 }
 
+.Title
+{
+    text-align: center;
+}
+
 .Title, .Winner
 {
     font-size: var(--titlesize);
-    text-align: center;
 }
 
 .Winner
@@ -24,8 +28,13 @@ body
     color: var(--wincol);
 }
 
-.Reset
+.Reset, .Tile
 {
     border-radius: var(--border);
     background-color: var(--butcol);
+}
+
+#root
+{
+    text-align: center;
 }

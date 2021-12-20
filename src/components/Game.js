@@ -3,6 +3,7 @@ import Winner from "./Winner";
 import Head from "./Head";
 import Row from "./Row";
 
+// Checks if the game should end
 function isGameEnded(grid, row, col, turn)
 {
     const cl = checkCol(grid, col, turn);
@@ -11,6 +12,7 @@ function isGameEnded(grid, row, col, turn)
     return cl || rw || cr;
 }
 
+// Verifies column
 function checkCol(grid, col, turn)
 {
     for (let i = 0; i < grid.length; ++i)
@@ -24,6 +26,7 @@ function checkCol(grid, col, turn)
     return true;
 }
 
+// Verifies row
 function checkRow(grid, row, turn)
 {
     for (let i = 0; i < grid[row].length; ++i)
@@ -37,6 +40,7 @@ function checkRow(grid, row, turn)
     return true;
 }
 
+// Verifies reversed cross
 function checkRev(grid, turn)
 {
     const len = grid.length - 1;
@@ -52,6 +56,7 @@ function checkRev(grid, turn)
     return true;
 }
 
+// Verifies cross
 function checkCross(grid, turn)
 {
     for (let i = 0; i < grid.length; ++i)
@@ -65,6 +70,7 @@ function checkCross(grid, turn)
     return true;
 }
 
+// Handles main game logic
 class Game extends React.Component
 {
     state = {

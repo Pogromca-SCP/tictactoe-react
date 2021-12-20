@@ -1,5 +1,6 @@
 import Tile from "./Tile";
 
+// Handles the row
 function Row(props)
 {
     return (

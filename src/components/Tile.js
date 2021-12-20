@@ -1,3 +1,4 @@
+// Displays the tile
 function Tile(props)
 {
     const path = process.env.PUBLIC_URL + "/img/" + (props.value == 0 ? "none.png" : (props.value > 0 ? "cross.png" : "circle.png"));
