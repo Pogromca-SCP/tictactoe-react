@@ -1,0 +1,31 @@
+:root
+{
+    --pagecolor: #cccccc;
+    --titlesize: 48px;
+    --wincol: green;
+    --border: 5px;
+    --butcol: orange;
+}
+
+body
+{
+    background-color: var(--pagecolor);
+    font-family: Calibri;
+}
+
+.Title, .Winner
+{
+    font-size: var(--titlesize);
+    text-align: center;
+}
+
+.Winner
+{
+    color: var(--wincol);
+}
+
+.Reset
+{
+    border-radius: var(--border);
+    background-color: var(--butcol);
+}
