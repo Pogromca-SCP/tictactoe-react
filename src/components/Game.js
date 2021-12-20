@@ -7,9 +7,8 @@ function isGameEnded(grid, row, col, turn)
 {
     const cl = checkCol(grid, col, turn);
     const rw = checkRow(grid, row, turn);
-    const cr = checkCross(grid, turn);
-    const rev = checkRev(grid, turn);
-    return cl || rw || cr || rev;
+    const cr = row == col ? checkCross(grid, turn) : (grid.length - 1 - row == col ? checkRev(grid, turn) : false);
+    return cl || rw || cr;
 }
 
 function checkCol(grid, col, turn)
