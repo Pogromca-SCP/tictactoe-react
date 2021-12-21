@@ -122,13 +122,14 @@ class Game extends React.Component
             }
         }
 
+        const range = [0, 1, 2];
+        const rows = range.map(x => <Row value={this.state.gameState[x]} func={updateGame} row={x} range={range} />);
+        
         return (
             <div>
                 <Winner value={this.state.winner} />
                 <Head value={this.state.turn} />
-                <Row value={this.state.gameState[0]} func={updateGame} row="0" />
-                <Row value={this.state.gameState[1]} func={updateGame} row="1" />
-                <Row value={this.state.gameState[2]} func={updateGame} row="2" />
+                {rows}
                 <button className="Reset" onClick={resetGame}>Reset</button>
             </div>
         );

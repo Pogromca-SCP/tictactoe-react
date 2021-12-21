@@ -3,11 +3,11 @@ import Tile from "./Tile";
 // Handles the row
 function Row(props)
 {
+    const tiles = props.range.map(x => <Tile value={props.value[x]} func={props.func} row={props.row} col={x} />);
+
     return (
         <div>
-            <Tile value={props.value[0]} func={props.func} row={props.row} col="0" />
-            <Tile value={props.value[1]} func={props.func} row={props.row} col="1" />
-            <Tile value={props.value[2]} func={props.func} row={props.row} col="2" />
+            {tiles}
         </div>
     );
 }
